@@ -5,6 +5,6 @@ function Get-Greeting ($Text) {
         "How are you?"
     }
     else { 
-        Get-GreetingHelper
+        "What's up bro?"
     }
 }
