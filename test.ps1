@@ -13,7 +13,7 @@ $pester = Get-Module -Name Pester -ListAvailable | Where-Object Version -ge 5.2.
 
 if (-not $pester) {
     Set-PSRepository psgallery -InstallationPolicy trusted
-    Install-Module Pester -Scope CurrentUser -MinimumVersion 5.2.0 -MaximumVersion 5.99.99 -AllowPrerelease -Force
+    Install-Module Pester -Scope CurrentUser -MinimumVersion 5.2.0-alpha3 -MaximumVersion 5.99.99 -AllowPrerelease -Force
 }
 
 Import-Module Pester
@@ -23,7 +23,7 @@ $Configuration = [PesterConfiguration]::Default
 $Configuration.Run.Path = $Path
 
 $Configuration.Output.Verbosity = $Output
-
+ 
 $Configuration.CodeCoverage.Enabled = [bool] $CodeCoverage
 # CoverageGutters is new option in Pester 5.2 pre-release
 $Configuration.CodeCoverage.OutputFormat = "CoverageGutters"
