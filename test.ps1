@@ -29,7 +29,7 @@ $Configuration.CodeCoverage.Enabled = [bool] $CodeCoverage
 $Configuration.CodeCoverage.OutputFormat = "Jacoco"
 $Configuration.CodeCoverage.Path = "$PSScriptRoot/src"
 $Configuration.CodeCoverage.OutputPath = "$PSScriptRoot/coverage.xml"
-$Configuration.CodeCoverage.CoveragePercentTarget = 90
+# $Configuration.CodeCoverage.CoveragePercentTarget = 90
 
 $Configuration.Debug.WriteDebugMessages = $true
 $Configuration.Debug.WriteDebugMessagesFrom = "CodeCoverage"
